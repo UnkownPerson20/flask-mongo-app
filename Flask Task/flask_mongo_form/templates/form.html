@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Data</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 40px 32px 32px 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #2d3a4b;
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 6px;
+            color: #34495e;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 10px;
+            margin-bottom: 18px;
+            border: 1px solid #b2bec3;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #6a89cc;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            background: linear-gradient(90deg, #6a89cc, #b8e994);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #4a69bd, #78e08f);
+        }
+        .error-message {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .success-message {
+            color: #27ae60;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        @media (max-width: 500px) {
+            .form-container {
+                padding: 24px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Submit Your Information</h1>
+        <form method="POST" autocomplete="off">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <button type="submit">Submit</button>
+        </form>
+        {% if error %}
+            <div class="error-message">Error: {{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

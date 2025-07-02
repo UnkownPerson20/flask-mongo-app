@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Successful</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .success-container {
+            background: #fff;
+            padding: 40px 32px 32px 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .checkmark {
+            font-size: 60px;
+            color: #27ae60;
+            margin-bottom: 18px;
+            animation: pop 0.5s;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.7); opacity: 0; }
+            80% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        h2 {
+            color: #2d3a4b;
+            margin-bottom: 12px;
+        }
+        p {
+            color: #34495e;
+            margin-bottom: 24px;
+        }
+        a, .submit-another-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(90deg, #6a89cc, #b8e994);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        a:hover, .submit-another-btn:hover {
+            background: linear-gradient(90deg, #4a69bd, #78e08f);
+        }
+        @media (max-width: 500px) {
+            .success-container {
+                padding: 24px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="checkmark">✔️</div>
+        <h2>Data Submitted Successfully!</h2>
+        <p>Thank you for submitting your information.</p>
+        <a href="/">Submit Another</a>
+    </div>
+</body>
+</html>
